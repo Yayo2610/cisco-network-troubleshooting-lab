@@ -5,7 +5,7 @@ Configurar dos routers Cisco (2911) ubicados en sitios distintos, cada uno con s
 
 ## 2. Topología
 
-![Topología inicial](images/01-topologia-inicial.png)
+![Topología inicial](01-topologia-inicial.png)
 
 - **Sitio 1 (amarillo):** Router1 + Switch + PC3, PC4
 - **Sitio 2 (celeste):** Router2 + Switch + PC0, PC1, PC2
