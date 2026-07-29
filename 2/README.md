@@ -18,7 +18,7 @@ Construir una red doméstica/pequeña oficina (**SOHO – Small Office/Home Offi
 
 ## Topología
 
-![Topología de la red SOHO](images/topologia.png)
+![Topología de la red SOHO](topologia.png)
 
 ## Tabla de direccionamiento IP
 
@@ -42,15 +42,15 @@ Construir una red doméstica/pequeña oficina (**SOHO – Small Office/Home Offi
 
 **Ping hacia 192.168.1.11**
 
-![Resultado ping 192.168.1.11](images/ping-192-168-1-11.png)
+![Resultado ping 192.168.1.11](ping-192-168-1-11.png)
 
 **Ping hacia 192.168.1.12**
 
-![Resultado ping 192.168.1.12](images/ping-192-168-1-12.png)
+![Resultado ping 192.168.1.12](ping-192-168-1-12.png)
 
 **Ping hacia 192.168.1.20 (impresora)**
 
-![Resultado ping 192.168.1.20](images/ping-192-168-1-20.png)
+![Resultado ping 192.168.1.20](ping-192-168-1-20.png)
 
 | Destino | Paquetes enviados | Recibidos | Perdidos |
 |---|---|---|---|
