@@ -65,11 +65,11 @@ IP fija asignada manualmente en cada equipo (Desktop > IP Configuration), con el
 
 **Router1 — `show ip interface brief`:**
 
-![Router1 show ip interface brief](images/02-router1-show-ip-interface-brief.png)
+![Router1 show ip interface brief](02-router1-show-ip-interface-brief.png)
 
 **Router2 — `show ip interface brief`:**
 
-![Router2 show ip interface brief](images/03-router2-show-ip-interface-brief.png)
+![Router2 show ip interface brief](03-router2-show-ip-interface-brief.png)
 
 Ambas interfaces LAN y WAN muestran estado up/up, confirmando que la conectividad física y el direccionamiento básico están correctos en ambos routers.
 
@@ -80,9 +80,9 @@ Al realizar la prueba de conectividad entre sitios:
 PC3 > ping 192.168.1.1   (o ping hacia PC1)
 ```
 
-![Ping fallido 1](images/04-ping-fallido.png)
+![Ping fallido 1](04-ping-fallido.png)
 
-![Ping fallido 2](images/05-ping-fallido-2.png)
+![Ping fallido 2](05-ping-fallido-2.png)
 
 ### Diagnóstico
 - Las interfaces de ambos routers están activas (up/up), por lo que el problema no es de capa física.
@@ -96,15 +96,15 @@ El Cloud-PT genérico de Packet Tracer está diseñado para emular servicios de 
 ### Solución aplicada
 Se sustituyó el dispositivo Cloud-PT por un **Switch 2960-24TT (Switch5)**, conectado directamente a las interfaces `GigabitEthernet0/0` de ambos routers. Al ser un dispositivo de Capa 2, distribuye el tráfico entre sus puertos sin necesidad de configuración ni mapeos adicionales. Tras el cambio, se repitió la configuración de interfaces y rutas estáticas en los routers (identificados por Packet Tracer como Router1 y Router2).
 
-![Topología final con switch](images/06-topologia-final-switch.png)
+![Topología final con switch](06-topologia-final-switch.png)
 
 ## 7. Resultado final — confirmado
 
 Tras aplicar el cambio de topología (switch en lugar de nube) y reconfigurar los routers, la prueba de conectividad extremo a extremo fue exitosa:
 
-![Ping exitoso 1](images/07-ping-exitoso-1.png)
+![Ping exitoso 1](07-ping-exitoso-1.png)
 
-![Ping exitoso 2](images/08-ping-exitoso-2.png)
+![Ping exitoso 2](08-ping-exitoso-2.png)
 
 ## 8. Conclusión
 El problema no se debía al direccionamiento IP ni a las rutas estáticas, que estaban correctamente configuradas desde el inicio, sino a una limitación del dispositivo Cloud-PT de Packet Tracer para actuar como puente Ethernet directo entre dos routers. La sustitución por un switch de Capa 2 resolvió la conectividad de forma inmediata y sin necesidad de configuración adicional.
